@@ -2,11 +2,13 @@
 
 using namespace std;
 
-int main(){
+int main()
+{
     int M, D, S;
     cin >> M >> D;
     S = (M * 2 + D) % 3;
-    switch (S){
+    switch (S)
+    {
         case 0:
             cout << "普通";
             break;
