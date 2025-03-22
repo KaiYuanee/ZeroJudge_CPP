@@ -2,12 +2,18 @@
 #include <iostream>
 #include <cmath>
 
-string toBinary(digit_num, num)
-{
-    
-}
-
 using namespace std;
+
+string toBinary(int digit_num, int num)
+{
+    string binary_num = "";
+    for (int i = 0; i < digit_num; i++)
+    {
+        binary_num = to_string(num % 2) + binary_num;
+        num /= 2;
+    }
+    return binary_num;
+}
 
 int main()
 {
