@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <unordered_set>
 
 using namespace std;
 
@@ -17,16 +18,13 @@ int main()
                 cin >> num_list[j][k];
             }
         }
+        unordered_set<int> num_set(num_list[1].begin(), num_list[1].end());
         int same_count = 0;
         for (int j : num_list[0])
         {
-            for (int k : num_list[1])
+            if (num_set.count(j))
             {
-                if (j == k)
-                {
-                    same_count++;
-                    break;
-                }
+                same_count++;
             }
         }
         cout << same_count << endl;
